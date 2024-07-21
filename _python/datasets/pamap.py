@@ -5,9 +5,9 @@ from __future__ import print_function, division
 import os
 from joblib import Memory
 
-import paths
+from _python.datasets import paths
 from ..files import list_files, ensure_dir_exists
-from pamap_common import *  # noqa
+from _python.datasets.pamap_common import *  # noqa
 
 memory = Memory('./')
 join = os.path.join

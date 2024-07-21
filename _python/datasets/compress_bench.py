@@ -7,10 +7,11 @@ import numpy as np
 from joblib import Memory
 
 # from . utils.files import ensure_dir_exists
-from .. import files
+from _python import files
 
-from . import ampds, ucr, pamap, uci_gas, msrc
-from . import paths
+# from . import ampds, ucr, pamap, uci_gas, msrc
+from . import uci_gas
+from _python.datasets import paths
 
 from .. import compress
 
@@ -182,7 +183,7 @@ def concat_and_interpolate(mats, interp_npoints=5):
 
     # multiply jumps by offsets to get interpolated values; note that
     # we reshape offsets oddly to get it to broadcast
-    new_shape = list(np.ones(len(boundary_jumps.shape), dtype=np.int))
+    new_shape = list(np.ones(len(boundary_jumps.shape), dtype=int))
     new_shape.append(len(offsets))
     offsets = offsets.reshape(new_shape)
     boundary_jumps = boundary_jumps[..., np.newaxis]
@@ -241,16 +242,16 @@ def write_dsets(which_dsets='normal', delta_encode=False,
 
     if write_normal_datasets or write_split_datasets:
         funcs_and_names = [
-            (ampds.all_gas_recordings, 'ampd_gas'),
-            (ampds.all_water_recordings, 'ampd_water'),
-            (ampds.all_power_recordings, 'ampd_power'),
-            (ampds.all_weather_recordings, 'ampd_weather'),
+#             (ampds.all_gas_recordings, 'ampd_gas'),
+#             (ampds.all_water_recordings, 'ampd_water'),
+#             (ampds.all_power_recordings, 'ampd_power'),
+#             (ampds.all_weather_recordings, 'ampd_weather'),
             (uci_gas.all_recordings, 'uci_gas'),
-            (pamap.all_recordings, 'pamap'),
-            (msrc.all_recordings, 'msrc'),
+#             (pamap.all_recordings, 'pamap'),
+#             (msrc.all_recordings, 'msrc'),
         ]
-        if write_split_datasets:
-            funcs_and_names = [(msrc.all_recordings, 'msrc_split')]
+#         if write_split_datasets:
+#             funcs_and_names = [(msrc.all_recordings, 'msrc_split')]
 
         # # TODO rm
         # # recordings = list(msrc.all_recordings())
@@ -292,18 +293,18 @@ def write_dsets(which_dsets='normal', delta_encode=False,
                                   zigzag_encode=zigzag_encode, dry_run=dry_run,
                                   store_as_dtype=store_as_dtype, verbose=1)
 
-    if write_ucr_datasets:
+#     if write_ucr_datasets:
         # i = 0 # TODO rm
         # for dset in ucr.origUCRDatasets():
         # for dset in list(ucr.allUCRDatasets())[:2]:
-        for dset in ucr.allUCRDatasets():
-            mat = concat_and_interpolate(dset.X)
-            for dtype in dtypes:
-                dtype2path = write_dataset(
-                    mat, dset.name, order=storage_order, dtype=dtype,
-                    subdir='ucr', delta_encode=delta_encode,
-                    zigzag_encode=zigzag_encode, store_as_dtype=store_as_dtype,
-                    verbose=1)
+#         for dset in ucr.allUCRDatasets():
+#             mat = concat_and_interpolate(dset.X)
+#             for dtype in dtypes:
+#                 dtype2path = write_dataset(
+#                     mat, dset.name, order=storage_order, dtype=dtype,
+#                     subdir='ucr', delta_encode=delta_encode,
+#                     zigzag_encode=zigzag_encode, store_as_dtype=store_as_dtype,
+#                     verbose=1)
 
             # # break
             # if i == 2:

@@ -177,6 +177,7 @@ def _run_cmd(cmd, verbose=0):
     # print output[:1000]
     # print("about to trim output...")
     trimmed = output[:output.find('\ndone...')]
+    print(trimmed)
     # trimmed = trimmed[:]
 
     if not os.path.exists('./lzbench'):
@@ -186,8 +187,8 @@ def _run_cmd(cmd, verbose=0):
         # print("------------------------")
         print("raw output:\n" + output)
         print("trimmed output:\n", trimmed)
-
     # print("about to turn string into df")
+    
     try:
         return _df_from_string(trimmed[:])
     except:  # noqa
@@ -395,9 +396,9 @@ def fig_for_dset(dset, algos=None, save=True, df=None, nbits=None,
     # print df
 
     # df['Algorithm'] = raw_algos
-    compress_speeds = df['Compression speed'].as_matrix()
-    decompress_speeds = df['Decompression speed'].as_matrix()
-    ratios = (100. / df['Ratio']).as_matrix()
+    compress_speeds = df['Compression speed'].to_numpy()
+    decompress_speeds = df['Decompression speed'].to_numpy()
+    ratios = (100. / df['Ratio']).to_numpy()
 
     for i, algo in enumerate(algos):  # undo artificial boost from 0 padding
         name = algo.split()[0]  # ignore level

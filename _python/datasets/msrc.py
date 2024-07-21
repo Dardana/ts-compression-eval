@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from joblib import Memory
 
-import paths
+from _python.datasets import paths
 from ..files import ensure_dir_exists
 from . import viz
 
@@ -156,7 +156,7 @@ def all_recordings(idxs=None, only_valid=True):
 
 def _compute_label_idxs(labelTimes, sampleTimes):
     """Throws IndexError if any label time is outside range of sample times"""
-    labelIdxs = np.empty(len(labelTimes), dtype=np.int)
+    labelIdxs = np.empty(len(labelTimes), dtype=int)
     # print("sampleTimes shape: ", sampleTimes.shape)
     for i, time in enumerate(labelTimes):
         # extra [0] to unpack where()

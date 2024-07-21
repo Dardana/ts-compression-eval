@@ -71,6 +71,12 @@ class Options(object):
 # ================================================================ Funcs
 
 # ------------------------------------------------ misc utils
+def ensure_list_or_tuple(x):
+    if not isinstance(x, (list, tuple)):
+        return [x]
+    return x
+
+
 
 def make_immutable(x):
     """
