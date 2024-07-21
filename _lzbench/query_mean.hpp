@@ -80,8 +80,8 @@ public:
         }
     }
 
-    uint32_t nrows() const { return _nrows(); }
-    uint16_t ncols() const { return _ncols(); }
+    uint32_t nrows() const { return _nrows; }
+    uint16_t ncols() const { return _ncols; }
 
 private:
     std::vector<uint16_t> _which_dims;
