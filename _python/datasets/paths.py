@@ -2,7 +2,7 @@
 
 import os
 
-DATASETS_DIR = os.path.expanduser("~/Desktop/datasets/")
+DATASETS_DIR = os.path.expanduser("~/ts-compression-eval/_python/eval_datasets/datasets")
 
 
 def to_path(*args):
