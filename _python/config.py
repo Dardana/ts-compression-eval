@@ -11,7 +11,7 @@ import matplotlib as mpl
 from . import files
 
 # change this if you aren't me
-DATASETS_DIR = os.path.expanduser('~/ts-compression-eval/_python/eval_datasets/datasets/compress')
+DATASETS_DIR = os.path.expanduser('/mnt/c/Users/Albana\ Jaha/Desktop/MT/datasets/compress/')
 
 FIG_SAVE_DIR = 'figs'
 RESULTS_SAVE_DIR = 'results'
@@ -30,6 +30,8 @@ NDIMS_SPEED_RESULTS_PATH    = _results_path('ndims_speed', 'ndims_speed_results.
 PREPROC_SPEED_RESULTS_PATH  = _results_path('preproc_speed', 'preproc_speed_results.csv') # noqa
 PREPROC_UCR_RESULTS_PATH    = _results_path('preproc_ucr', 'preproc_ucr_results.csv') # noqa
 MULTICORE_RESULTS_PATH      = _results_path('multicore', 'multicore_queries.csv') # noqa
+CUSTOM_RESULTS_PATH         = _results_path('custom', 'custom_results.csv')
+PREPROC_CUSTOM_RESULTS_PATH    = _results_path('preproc_custom', 'preproc_custom_results.csv') # noqa
 
 files.ensure_dir_exists(RESULTS_BACKUP_DIR)
 files.ensure_dir_exists(os.path.dirname(ALL_RESULTS_PATH))
@@ -41,6 +43,8 @@ files.ensure_dir_exists(os.path.dirname(NDIMS_SPEED_RESULTS_PATH))
 files.ensure_dir_exists(os.path.dirname(PREPROC_SPEED_RESULTS_PATH))
 files.ensure_dir_exists(os.path.dirname(PREPROC_UCR_RESULTS_PATH))
 files.ensure_dir_exists(os.path.dirname(MULTICORE_RESULTS_PATH))
+files.ensure_dir_exists(os.path.dirname(CUSTOM_RESULTS_PATH))
+files.ensure_dir_exists(os.path.dirname(PREPROC_CUSTOM_RESULTS_PATH))
 
 SYNTH_LOW_COMPRESSION_RATIO = 1
 SYNTH_HIGH_COMPRESSION_RATIO = 8
@@ -143,7 +147,9 @@ ALL_DSETS = [
     DsetInfo('MSRC-Split', 'msrc_split', 80),
     DsetInfo('PAMAP', 'pamap', 31),
     DsetInfo('UCI Gas', 'uci_gas', 18),
-    DsetInfo('UCR', 'ucr', 1)
+    DsetInfo('UCR', 'ucr', 1),
+    DsetInfo('Custom Data', 'custom_data', 99)
+
 ]
 NAME_2_DSET = {ds.bench_name: ds for ds in ALL_DSETS}
 PRETTY_DSET_NAMES = {ds.bench_name: ds.pretty_name for ds in ALL_DSETS}
@@ -323,10 +329,11 @@ def get_algo_info(name_and_level, nbits=8):
 BENCH_NAME_TO_PRETTY_NAME = dict([(info.lzbench_name, key)
                                  for (key, info) in ALGO_INFO.items()])
 
-USE_WHICH_ALGOS = 'SprintzDelta SprintzXff SprintzDelta_Huf SprintzXff_Huf ' \
-    'SprintzDelta_16b SprintzXff_16b SprintzDelta_Huf_16b SprintzXff_Huf_16b '\
-    'SIMDBP128 FastPFOR Simple8B ' \
-    'Zstd Snappy LZ4 Zlib Huffman'.split()
+USE_WHICH_ALGOS ='SprintzDelta Zstd Huffman LZ4 Simple8B Snappy'.split()
+# USE_WHICH_ALGOS = 'SprintzDelta SprintzXff SprintzDelta_Huf SprintzXff_Huf ' \
+# 'SprintzDelta_16b SprintzXff_16b SprintzDelta_Huf_16b SprintzXff_Huf_16b '\
+# 'SIMDBP128 FastPFOR Simple8B ' \
+# 'Zstd Snappy LZ4 Zlib Huffman'.split()
     # 'Zstd Snappy LZO LZ4 Zlib Huffman'.split()
 SPRINTZ_ALGOS = [algo for algo in ALGO_INFO if algo.lower().startswith('sprintz')]
 

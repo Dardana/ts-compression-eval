@@ -136,7 +136,7 @@ def _readtxt(path, sep=None):
 
 def readDataFile(path, sep=None, mean_norm=True):
     D = _readtxt(path, sep=sep)
-    labels = D[:, 0].astype(np.int)
+    labels = D[:, 0].astype(int)
     X = D[:, 1:]
     if mean_norm:
         X -= np.mean(X, axis=1, keepdims=True)

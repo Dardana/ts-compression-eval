@@ -36,7 +36,7 @@ else:
 DEBUG = False
 
 # hack for specifying path directly, not based on algorithm requirements
-RAW_DSET_PATH_PREFIX = 'RAW_PATH:'
+RAW_DSET_PATH_PREFIX = 'RAW_PATH.'
 
 
 # ================================================================ experiments
@@ -91,7 +91,6 @@ def _dset_path(nbits, dset, algos, order, deltas):
         subdir = 'uint{}-as-uint32'.format(nbits)
     else:
         subdir = 'uint{}'.format(nbits)
-
     return join(path, subdir, dset)
 
 
@@ -278,7 +277,7 @@ def _run_experiment(nbits, algos, dsets=None, memlimit=-1, miniters=0, order='f'
         # add these results to master set of results, overwriting previous
         # results where relevant
         if save_path is None:
-            save_path = cfg.ALL_RESULTS_PATH
+            save_path = cfg.ALL_RESULTS_PATH  #CUSTOM_RESULTS_PATH   #ALL_RESULTS_PATH
 
         if os.path.exists(save_path):
             existing_results = pd.read_csv(save_path)
@@ -496,11 +495,6 @@ def run_sweep(algos=None, create_fig=False, nbits=None, all_use_u32=None,
         all_dsets = cfg.ALL_DSET_NAMES
     if all_algos is None:
         all_algos = cfg.USE_WHICH_ALGOS
-    # if all_queries is None:
-        # all_queries = [None]
-        # all_algos = ('Zstd LZ4 LZ4HC Snappy FSE Huffman FastPFOR Delta ' +
-        #              'DoubleDelta DeltaRLE_HUF DeltaRLE BitShuffle8b ' +
-        #              'ByteShuffle8b').split()
 
     all_nbits = pyience.ensure_list_or_tuple(all_nbits)
     all_use_u32 = pyience.ensure_list_or_tuple(all_use_u32)
@@ -509,11 +503,7 @@ def run_sweep(algos=None, create_fig=False, nbits=None, all_use_u32=None,
     all_dsets = pyience.ensure_list_or_tuple(all_dsets)
     all_algos = pyience.ensure_list_or_tuple(all_algos)
 
-    # all_algorithms = ('BitShuffle8b ByteShuffle8b').split()
-    # all_dsets = ['PAMAP']
 
-    # delta_algos = [algo for algo in algos if ALGO_INFO[algo].allow_delta]
-    # delta_u32_algos = [algo for algo in delta_algos if ALGO_INFO[algo].needs_32b]
 
     all_combos = itertools.product(
         all_nbits, all_use_u32, all_preprocs, all_orders,
@@ -556,10 +546,22 @@ def run_sweep(algos=None, create_fig=False, nbits=None, all_use_u32=None,
                         query_id=use_query, **kwargs)
 
 
+#cfg.USE_WHICH_ALGOS
 def run_ucr():
     run_sweep(dsets='ucr', algos=cfg.USE_WHICH_ALGOS, miniters=0,
               save_path=cfg.UCR_RESULTS_PATH)
 
+
+def run_custom():
+    run_sweep(dsets='custom_data', algos='Zstd', miniters=0, save_path=cfg.CUSTOM_RESULTS_PATH)
+
+def run_preprocs_custom():
+    # TODO higher miniters once working
+    # run_sweep(dsets='ucr', algos=cfg.PREPROC_EFFECTS_ALGOS, miniters=10,
+    # run_sweep(dsets='ucr', algos=['Huffman', 'Snappy', 'LZ4'], miniters=0,
+    run_sweep(dsets='custom_data', algos=['Zstd', 'Zlib'], miniters=0,
+              preprocs=cfg.ALL_PREPROCS,
+              save_path=cfg.PREPROC_CUSTOM_RESULTS_PATH)
 
 def run_memlimit_ucr():
     run_sweep(dsets='ucr', algos=cfg.USE_WHICH_ALGOS, miniters=0,
@@ -669,6 +671,11 @@ def main():
     # _run_experiment(nbits=8, dsets=['ampd_gas'], algos=['Huffman'])
 
     kwargs = pyience.parse_cmd_line()
+    # Convert comma-separated strings to lists
+    if 'algos' in kwargs and isinstance(kwargs['algos'], str):
+        kwargs['algos'] = kwargs['algos'].split(',')
+    if 'dsets' in kwargs and isinstance(kwargs['dsets'], str):
+        kwargs['dsets'] = kwargs['dsets'].split(',')
 
     if kwargs.get('run_ucr', False):
         run_ucr()
@@ -701,6 +708,16 @@ def main():
     if kwargs.get('multicore', False):
         run_multicore_queries()
         print("ran multicore queries")
+        return
+
+    if kwargs.get('custom', False):
+        run_custom()
+        print("ran custom")
+        return
+
+    if kwargs.get('preproc_custom', False):
+        run_preprocs_custom()
+        print("ran preproc custom")
         return
 
     if kwargs is not None and kwargs.get('sweep', False):

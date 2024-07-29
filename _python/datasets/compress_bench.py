@@ -10,7 +10,7 @@ from joblib import Memory
 from _python import files
 
 # from . import ampds, ucr, pamap, uci_gas, msrc
-from . import uci_gas
+from . import uci_gas, ucr, custom_dataset
 from _python.datasets import paths
 
 from .. import compress
@@ -171,6 +171,7 @@ def concat_and_interpolate(mats, interp_npoints=5):
 
     # print "mats: ", mats
 
+
     dtype = mats[0].dtype
 
     first_vals = np.vstack([mat[0] for mat in mats])
@@ -247,6 +248,8 @@ def write_dsets(which_dsets='normal', delta_encode=False,
 #             (ampds.all_power_recordings, 'ampd_power'),
 #             (ampds.all_weather_recordings, 'ampd_weather'),
             (uci_gas.all_recordings, 'uci_gas'),
+            (custom_dataset.all_recordings, 'custom_data')
+
 #             (pamap.all_recordings, 'pamap'),
 #             (msrc.all_recordings, 'msrc'),
         ]
@@ -276,6 +279,8 @@ def write_dsets(which_dsets='normal', delta_encode=False,
 
         for func, name in funcs_and_names:
             recordings = func()
+
+
             # print "data shapes: ", [r.data.shape for r in recordings]
             if write_each_recording:
                 for r in recordings:
@@ -293,18 +298,18 @@ def write_dsets(which_dsets='normal', delta_encode=False,
                                   zigzag_encode=zigzag_encode, dry_run=dry_run,
                                   store_as_dtype=store_as_dtype, verbose=1)
 
-#     if write_ucr_datasets:
+    if write_ucr_datasets:
         # i = 0 # TODO rm
         # for dset in ucr.origUCRDatasets():
         # for dset in list(ucr.allUCRDatasets())[:2]:
-#         for dset in ucr.allUCRDatasets():
-#             mat = concat_and_interpolate(dset.X)
-#             for dtype in dtypes:
-#                 dtype2path = write_dataset(
-#                     mat, dset.name, order=storage_order, dtype=dtype,
-#                     subdir='ucr', delta_encode=delta_encode,
-#                     zigzag_encode=zigzag_encode, store_as_dtype=store_as_dtype,
-#                     verbose=1)
+         for dset in ucr.allUCRDatasets():
+             mat = concat_and_interpolate(dset.X)
+             for dtype in dtypes:
+                 dtype2path = write_dataset(
+                     mat, dset.name, order=storage_order, dtype=dtype,
+                     subdir='ucr', delta_encode=delta_encode,
+                     zigzag_encode=zigzag_encode, store_as_dtype=store_as_dtype,
+                     verbose=1)
 
             # # break
             # if i == 2:

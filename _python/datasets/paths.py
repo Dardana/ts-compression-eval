@@ -2,7 +2,7 @@
 
 import os
 
-DATASETS_DIR = os.path.expanduser("~/ts-compression-eval/_python/eval_datasets/datasets")
+DATASETS_DIR = os.path.expanduser("/mnt/c/Users/Albana Jaha/Desktop/MT/datasets")
 
 
 def to_path(*args):
@@ -11,13 +11,14 @@ def to_path(*args):
 
 # straightforward datasets
 # MSRC_12 = to_path('MSRC-12', 'origData')
-# UCR_ORIG = to_path('ucr_data')
-# UCR = to_path('UCR_TS_Archive_2015')
+UCR_ORIG = to_path('ucr_data')
+UCR = to_path('UCR_TS_Archive_2015')
 # UWAVE = to_path('uWave', 'extracted')
 # PAMAP = to_path('PAMAP_Dataset')
 # PAMAP2 = to_path('PAMAP2_Dataset')
 # WARD = to_path('WARD1.0')
 UCI_GAS = to_path('uci-gas-sensor')
+CUSTOM_DATA = to_path('custom_data')
 
 # ampds2
 # AMPD2_POWER = to_path('ampds2', 'electric')

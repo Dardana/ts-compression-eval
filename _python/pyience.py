@@ -303,6 +303,7 @@ def generate_params_combinations(params_list, update_func={}):
 
                 if unfinished:
                     allFinished = False
+
                 params[KEY_FINISHED_UPDATING] = not unfinished
 
         params_list = new_list

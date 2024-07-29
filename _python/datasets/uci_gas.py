@@ -56,13 +56,7 @@ def _read_gas_file(path):
 
 
 def main():
-    # import matplotlib.pyplot as plt
-    # for r in all_recordings():
-    #     print "recording {} has data of shape {}".format(r.name, r.data.shape)
-    #     plt.plot(r.sampleTimes, r.sensor_data)
-    #     plt.show()
-
-    viz.plot_recordings(all_recordings(), interval_len=10000, savedir=FIG_SAVE_DIR)
+    viz.save_fig_png(all_recordings(), interval_len=10000, savedir=FIG_SAVE_DIR)
 
 
 if __name__ == '__main__':

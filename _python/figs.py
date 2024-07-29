@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+
 from __future__ import print_function
 from __future__ import division
 
@@ -14,7 +15,7 @@ from joblib import Memory  # pip install joblib
 
 from _python import config as cfg
 from _python import pyience
-from _python import files
+from _python import main
 
 _memory = Memory('./', verbose=1)
 
@@ -405,7 +406,7 @@ def _read_and_clean_ucr_results(no_preprocs, memlimit=-1, results_path=cfg.UCR_R
     # full_df = df
 
 
-# def boxplot_ucr(others_deltas=False, save=True):
+
 def boxplot_ucr(save=True, preproc_plot=False, memlimit=-1, results_path=None):
     # df = pd.read_csv(cfg.UCR_RESULTS_PATH)
 
@@ -503,6 +504,7 @@ def boxplot_ucr(save=True, preproc_plot=False, memlimit=-1, results_path=None):
             # print("new colnames: ", new_colnames)
 
             df = _fix_algo_col_names(df)
+            print(df)
 
             # ratios1 = df['Sprintz -1'].as_matrix()
             # ratios2 = df['Sprintz -2'].as_matrix()
@@ -518,13 +520,13 @@ def boxplot_ucr(save=True, preproc_plot=False, memlimit=-1, results_path=None):
 
             # print("colnames: ", colnames)
             # print("new colnames: ", new_colnames)
-
-            # order = ['Sprintz -1', 'Sprintz -2', 'Sprintz -3',
-            #          'Zlib -1', 'Zlib -9', 'Zstd -1', 'Zstd -9',
-            order = ['SprintzDelta', 'SprintzFIRE', 'SprintzFIRE+Huf',
-                     'Zlib', 'Zstd',
-                     'FastPFOR', 'Huffman', 'LZ4',
-                     'SIMDBP128', 'Simple8B', 'Snappy']
+            #order = [main.kwargs['algos']]
+            order = ['Zstd', 'Zlib']
+            #order = ['SprintzDelta','Zstd','Huffman', 'LZ4', 'Simple8B', 'Snappy']
+            # order = ['SprintzDelta', 'SprintzFIRE', 'SprintzFIRE+Huf',
+            #          'Zlib', 'Zstd',
+            #          'FastPFOR', 'Huffman', 'LZ4',
+            #          'SIMDBP128', 'Simple8B', 'Snappy']
                      # 'FastPFOR', 'Huffman', 'LZ4', 'LZO -1', 'LZO -9',
 
             sb.boxplot(data=df, ax=ax, order=order)
@@ -541,8 +543,9 @@ def boxplot_ucr(save=True, preproc_plot=False, memlimit=-1, results_path=None):
     # for really unclear reasons, the second line is necessary when we
     # use rotation_mode='anchor' to avoid ticklabels ending up the plot
     xlabels = list(ax.get_xticklabels())
+    print(xlabels)
     # print("WTF are these xticklabels?: ", xlabels)
-    for i in range(3):
+    for i in range(2):
         # xlabels[i].weight = 'bold'
         xlabels[i].set_weight('bold')
     ax.set_xticklabels(xlabels, rotation=70, rotation_mode='anchor')
@@ -572,6 +575,116 @@ def boxplot_ucr(save=True, preproc_plot=False, memlimit=-1, results_path=None):
     else:
         plt.show()
 
+def boxplot(save=True, preproc_plot=False, memlimit=-1, results_path=None):
+
+    if results_path is None:
+        results_path = cfg.PREPROC_UCR_RESULTS_PATH \
+            if preproc_plot else cfg.UCR_RESULTS_PATH
+    df = _read_and_clean_ucr_results(
+        no_preprocs=not preproc_plot, memlimit=memlimit, results_path=results_path)
+
+    df['Algorithm'] = df['Algorithm'].apply(lambda s: s if s[-2:] != '-9' else s.split()[0])
+
+
+    figsize = (10, 6) if preproc_plot else (5, 7)
+    _, axes = plt.subplots(2, 1, figsize=figsize, sharex=True, sharey=True)
+
+    full_df = df
+    for i, nbits in enumerate((8, 16)):
+        ax = axes[i]
+        if i != len(axes) - 1:
+            plt.setp(ax.get_xticklabels(), visible=False)
+            ax.get_xaxis().set_visible(False)
+
+        df = full_df[full_df['Nbits'] == nbits]
+        df = df.drop('Nbits', axis=1)
+
+        if len(df) == 0:
+            print("WARNING: No results for nbits = {}".format(nbits))
+            continue
+
+        # if it complains about duplicate entries here, might be because
+        # memcpy ran on some stuff (but not everything for some reason)
+        if preproc_plot:
+            # XXX this case just assumes we didn't run with any u32 codecs,
+            # since we don't carry out the u32 correction below
+            df['Algorithm'] = df['Algorithm'].apply(_clean_algo_name)
+
+            sb.boxplot(ax=ax, data=df, x='Algorithm', y='Ratio', hue='Preprocs')
+
+        else:
+            df = df.pivot(index='Filename', columns='Algorithm', values='Ratio')
+
+            for col in df:
+                info = cfg.ALGO_INFO.get(col)
+                if info is not None and info.needs_32b:
+                    print("scaling comp ratio for col: {}".format(col))
+                    # print("old df col:")
+                    # print(df[col][:10])
+
+                    # df[col] = df[col] * (32 / nbits)  # if using % of orig
+                    df[col] = df[col] * (nbits / 32)    # if using orig/compressed
+
+
+
+            df = _fix_algo_col_names(df)
+            print(df)
+
+            # ratios1 = df['Sprintz -1'].as_matrix()
+            # ratios2 = df['Sprintz -2'].as_matrix()
+            ratios1 = df['SprintzDelta'].as_matrix()
+            ratios2 = df['SprintzFIRE'].as_matrix()
+            num_wins = np.sum(ratios2 > ratios1)
+            rel_improvements = (ratios2 - ratios1) / ratios1
+            from scipy import stats
+            _, pvalue = stats.wilcoxon(ratios1, ratios2)
+            print("FIRE wins {} / {} datasets (p={}); mean, std of rel improvement = {}, {}".format(
+                num_wins, len(ratios1), pvalue,
+                np.mean(rel_improvements), np.std(rel_improvements)))
+
+            order = [main.kwargs['algos']]
+            #order = ['Zlib', 'Zstd']
+            #order = ['SprintzDelta','Zstd','Huffman', 'LZ4', 'Simple8B', 'Snappy']
+            # order = ['SprintzDelta', 'SprintzFIRE', 'SprintzFIRE+Huf',
+            #          'Zlib', 'Zstd',
+            #          'FastPFOR', 'Huffman', 'LZ4',
+            #          'SIMDBP128', 'Simple8B', 'Snappy']
+                     # 'FastPFOR', 'Huffman', 'LZ4', 'LZO -1', 'LZO -9',
+
+            sb.boxplot(data=df, ax=ax, order=order)
+
+        ax.semilogy()
+
+
+        add_ylabel_on_right(ax, "{}-bit Data".format(nbits))
+
+    # for ax in axes:
+    # for really unclear reasons, the second line is necessary when we
+    # use rotation_mode='anchor' to avoid ticklabels ending up the plot
+    xlabels = list(ax.get_xticklabels())
+    # print("WTF are these xticklabels?: ", xlabels)
+    for i in range(len(xlabels)):
+        xlabels[i].set_weight('bold')
+    ax.set_xticklabels(xlabels, rotation=70, rotation_mode='anchor')
+    plt.setp(ax.xaxis.get_majorticklabels(), ha='right')  # align xticklabels nicely?
+
+    for ax in axes:
+        ax.set_ylabel("Compression Ratio", fontsize=14)
+    title = f"Compression Ratios on {main.kwargs['dsets']} Datasets"
+    if memlimit > 0:
+        title += '\nBlock Size = {}KB'.format(memlimit)
+    axes[0].set_title(title, fontsize=16)
+
+    plt.tight_layout()
+    figname = 'boxplot_preproc' if preproc_plot else 'boxplot'
+    figname += '' if memlimit <= 0 else "_{}KB".format(memlimit)
+    if save:
+        save_fig_png(figname)
+    else:
+        plt.show()
+
+def preproc_boxplot():
+    boxplot(preproc_plot=True)
 
 def preproc_boxplot_ucr():
     boxplot_ucr(preproc_plot=True)
@@ -1148,16 +1261,17 @@ def main():
     # print("USE_WHICH_ALGOS: ", cfg.USE_WHICH_ALGOS)
 
     # decomp_vs_ratio_fig(nbits=8)
-    # decomp_vs_ratio_fig_success()
+    #decomp_vs_ratio_fig_success()
     # decomp_vs_ratio_fig_failure()
     # cd_diagram_ours_vs_others()
-    # boxplot_ucr()
-    # preproc_boxplot_ucr()
+    #boxplot_ucr()
+    #preproc_boxplot()
+    preproc_boxplot_ucr()
     # memlimit_boxplot_ucr()
     # decomp_vs_ndims_results()
     # comp_vs_ndims_results()
     # preproc_vs_ndims_results()
-    quantize_err_results()
+    #quantize_err_results()
     # theoretical_thruput(save=False)
     # ncores_vs_thruput()
 
