@@ -72,7 +72,7 @@ def _dset_path(nbits, dset, algos, order, deltas):
     path = join(path, 'colmajor') if order == 'f' else join(path, 'rowmajor')
 
     # storage format (number of bits, whether delta-encoded)
-    assert nbits in (8, 16)
+    assert nbits in (8, 16, 32)
 
     # algos = _canonical_algo_names(algos)
     want_32b = np.array([cfg.ALGO_INFO[algo].needs_32b for algo in algos])
@@ -82,6 +82,8 @@ def _dset_path(nbits, dset, algos, order, deltas):
                          ' algorithms:\n'.format(', '.join(algos)))
     want_32b = np.sum(want_32b) > 0
 
+
+
     if deltas and want_32b:
         # also zigzag encode since fastpfor and company assume nonnegative ints
         subdir = 'uint{}-as-uint32_deltas_zigzag'.format(nbits)
@@ -89,10 +91,11 @@ def _dset_path(nbits, dset, algos, order, deltas):
         # subdir = 'int{}_deltas'.format(nbits)
     elif want_32b:
         subdir = 'uint{}-as-uint32'.format(nbits)
+    elif nbits==32:
+        subdir = 'float{}'.format(nbits)
     else:
         subdir = 'uint{}'.format(nbits)
     return join(path, subdir, dset)
-
 
 def _generate_cmd(nbits, algos, dset_path, preprocs=None, memlimit=None,
                   miniters=1, use_u32=False, ndims=None, dset_name=None,
@@ -226,7 +229,9 @@ def _run_experiment(nbits, algos, dsets=None, memlimit=-1, miniters=0, order='f'
                     preprocs=None, create_fig=False, verbose=1, dry_run=DEBUG,
                     save_path=None, nthreads=0, query_id=None, **cmd_kwargs):
     dsets = cfg.ALL_DSET_NAMES if dsets is None else dsets
+    #dsets_FLOAT = cfg.ALL_DSET_NAMES_FLOAT if dsets is None else dsets
     dsets = pyience.ensure_list_or_tuple(dsets)
+    #dsets_FLOAT = pyience.ensure_list_or_tuple(dsets_FLOAT)
     algos = pyience.ensure_list_or_tuple(algos)
 
     # print("using nthreads, query: ", nthreads, query_id)
@@ -483,7 +488,7 @@ def run_sweep(algos=None, create_fig=False, nbits=None, all_use_u32=None,
 
     if all_nbits is None:
         # all_nbits = [16]
-        all_nbits = [8, 16]
+        all_nbits = [8, 16, 32]
     if all_use_u32 is None:
         # all_use_u32 = [True]
         all_use_u32 = [True, False]
@@ -553,7 +558,7 @@ def run_ucr():
 
 
 def run_custom():
-    run_sweep(dsets='custom_data', algos='Zstd', miniters=0, save_path=cfg.CUSTOM_RESULTS_PATH)
+    run_sweep(dsets='custom_data', algos='Zstd', miniters=0, save_path=cfg.CUSTOM_RESULTS_PATH, nbits=32)
 
 def run_preprocs_custom():
     # TODO higher miniters once working

@@ -12,6 +12,7 @@ from . import files
 
 # change this if you aren't me
 DATASETS_DIR = os.path.expanduser('/mnt/c/Users/Albana\ Jaha/Desktop/MT/datasets/compress/')
+#DATASETS_DIR_FLOAT = os.path.expanduser('/mnt/c/Users/Albana\ Jaha/Desktop/MT/datasets/custom_data/')
 
 FIG_SAVE_DIR = 'figs'
 RESULTS_SAVE_DIR = 'results'
@@ -112,7 +113,7 @@ def cmd_line_arg_for_preproc(preproc, ndims=1):
 class AlgoInfo(object):
 
     def __init__(self, lzbench_name, levels=None, allowed_preprocs=Preproc.ALL,
-                 allowed_nbits=[8, 16], needs_32b=False, group=None,
+                 allowed_nbits=[8, 16, 32], needs_32b=False, group=None,
                  allowed_orders=['f'], needs_ndims=False):
         self.lzbench_name = lzbench_name
         self.levels = levels
@@ -138,7 +139,7 @@ class DsetInfo(object):
         self.ndims = ndims
 
 
-ALL_DSETS = [
+ALL_DSETS_FLOAT = [
     DsetInfo('AMPD Gas', 'ampd_gas', 3),
     DsetInfo('AMPD Water', 'ampd_water', 2),
     DsetInfo('AMPD Power', 'ampd_power', 23),
@@ -151,8 +152,25 @@ ALL_DSETS = [
     DsetInfo('Custom Data', 'custom_data', 99)
 
 ]
+
+ALL_DSETS = [
+    DsetInfo('AMPD Gas', 'ampd_gas', 3),
+    DsetInfo('AMPD Water', 'ampd_water', 2),
+    DsetInfo('AMPD Power', 'ampd_power', 23),
+    DsetInfo('AMPD Weather', 'ampd_weather', 7),
+    DsetInfo('MSRC-12', 'msrc', 80),
+    DsetInfo('MSRC-Split', 'msrc_split', 80),
+    DsetInfo('PAMAP', 'pamap', 31),
+    DsetInfo('UCI Gas', 'uci_gas', 18),
+    DsetInfo('UCR', 'ucr', 1),
+    DsetInfo('Custom Data', 'custom_data', 99),
+
+]
 NAME_2_DSET = {ds.bench_name: ds for ds in ALL_DSETS}
 PRETTY_DSET_NAMES = {ds.bench_name: ds.pretty_name for ds in ALL_DSETS}
+
+NAME_2_DSET_FLOAT = {ds.bench_name: ds for ds in ALL_DSETS_FLOAT}
+PRETTY_DSET_NAMES_FLOAT = {ds.bench_name: ds.pretty_name for ds in ALL_DSETS_FLOAT}
 
 SUCCESS_DSETS = 'msrc pamap uci_gas'.split()
 FAILURE_DSETS = ['ampd_gas', 'ampd_water', 'ampd_power']
@@ -341,6 +359,7 @@ PREPROC_EFFECTS_ALGOS = 'Zstd Snappy LZO LZ4 Zlib Huffman'.split()
 
 
 ALL_DSET_NAMES = PRETTY_DSET_NAMES.keys()
+ALL_DSET_NAMES_FLOAT = PRETTY_DSET_NAMES_FLOAT.keys()
 
 # XXX might actually want to vary Order as an independent var, but for
 # now, this is a hack to not have two different memcpy results

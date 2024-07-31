@@ -10,7 +10,7 @@ def to_path(*args):
 
 
 # straightforward datasets
-# MSRC_12 = to_path('MSRC-12', 'origData')
+MSRC_12 = to_path('MSRC-12', 'origData')
 UCR_ORIG = to_path('ucr_data')
 UCR = to_path('UCR_TS_Archive_2015')
 # UWAVE = to_path('uWave', 'extracted')
