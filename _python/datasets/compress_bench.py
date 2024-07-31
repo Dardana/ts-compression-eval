@@ -251,11 +251,11 @@ def write_dsets(which_dsets='normal', delta_encode=False,
 #             (ampds.all_water_recordings, 'ampd_water'),
 #             (ampds.all_power_recordings, 'ampd_power'),
 #             (ampds.all_weather_recordings, 'ampd_weather'),
-             (uci_gas.all_recordings, 'uci_gas'),
+            # (uci_gas.all_recordings, 'uci_gas'),
             #(custom_dataset.all_recordings, 'custom_data')
 
 #             (pamap.all_recordings, 'pamap'),
-            (msrc.all_recordings, 'msrc')
+            #(msrc.all_recordings, 'msrc')
         ]
 #         if write_split_datasets:
 #             funcs_and_names = [(msrc.all_recordings, 'msrc_split')]
@@ -302,21 +302,18 @@ def write_dsets(which_dsets='normal', delta_encode=False,
                                   zigzag_encode=zigzag_encode, dry_run=dry_run,
                                   store_as_dtype=store_as_dtype, verbose=1)
 
-        if write_ucr_datasets:
-            print('Hallo')
+    if write_ucr_datasets:
                 # i = 0 # TODO rm
                 # for dset in ucr.origUCRDatasets():
                 # for dset in list(ucr.allUCRDatasets())[:2]:
-            # for dset in ucr.allUCRDatasets():
-            #     print(f"Processing UCR dataset: {dset.name}")
-            #     mat = concat_and_interpolate(dset.X)
-            #     print(f"UCR dataset {dset.name} shape: {mat.shape}")
-            #     for dtype in dtypes:
-            #         write_dataset(
-            #             mat, dset.name, order=storage_order, dtype=dtype,
-            #             subdir='ucr', delta_encode=delta_encode,
-            #             zigzag_encode=zigzag_encode, store_as_dtype=store_as_dtype,
-            #             verbose=1)
+        for dset in ucr.allUCRDatasets():
+            mat = concat_and_interpolate(dset.X)
+            for dtype in dtypes:
+                write_dataset(
+                    mat, dset.name, order=storage_order, dtype=dtype,
+                    subdir='ucr', delta_encode=delta_encode,
+                    zigzag_encode=zigzag_encode, store_as_dtype=store_as_dtype,
+                    verbose=1)
             # # break
             # if i == 2:
             #     print "mat shape: ", mat.shape
