@@ -10,7 +10,6 @@ from . import paths
 
 _memory = Memory('./')
 DATA_DIR = paths.CUSTOM_DATA
-DATA_FILE = 'd1.csv'
 FIG_SAVE_DIR =os.path.join('figs', 'custom_data')
 
 
@@ -26,7 +25,7 @@ class Custom(object):
         data = _load_data(path)
         self.path = path
         self.name = os.path.basename(path).split('.')[0]
-        self.sampleTimes =pd.to_datetime(data['time']).apply(lambda x: int(x.timestamp()))
+        self.sampleTimes = pd.to_datetime(data['time']).apply(lambda x: int(x.timestamp()))
         self.data = data[COLS_DATA].values.astype(np.float32)
 
 
@@ -43,7 +42,6 @@ def all_recordings():
 def _load_data(path):
     df = pd.read_csv(path)
     df = df.drop(columns=['id_station'])
-    print(df[COLS])
     return df[COLS]
 
 def _datetimes_to_unix_timestamps(datetimes):

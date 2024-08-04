@@ -149,7 +149,7 @@ ALL_DSETS_FLOAT = [
     DsetInfo('PAMAP', 'pamap', 31),
     DsetInfo('UCI Gas', 'uci_gas', 18),
     DsetInfo('UCR', 'ucr', 1),
-    DsetInfo('Custom Data', 'custom_data', 99)
+    DsetInfo('Custom Data', 'custom_data', 100)
 
 ]
 
@@ -163,7 +163,7 @@ ALL_DSETS = [
     DsetInfo('PAMAP', 'pamap', 31),
     DsetInfo('UCI Gas', 'uci_gas', 18),
     DsetInfo('UCR', 'ucr', 1),
-    DsetInfo('Custom Data', 'custom_data', 99),
+    DsetInfo('Custom Data', 'custom_data', 100),
 
 ]
 NAME_2_DSET = {ds.bench_name: ds for ds in ALL_DSETS}
