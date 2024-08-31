@@ -7,7 +7,7 @@ Then all compressors are used to compress and decompress the file and decompress
 This approach has a big advantage of using the same compiler with the same optimizations for all compressors.
 The disadvantage is that it requires source code of each compressor (therefore Slug or lzturbo are not included).
 
-This is a fork of the [original lzbench](https://github.com/inikep/lzbench) with added functionality. In particular, it allows integrated [double-]delta coding and execution of simple queries after decompression.
+This is a fork of the [Sprintz benchmark](https://github.com/dblalock/lzbench)) with added functionality. In particular, it allows integrated float compression.
 
 <!-- |Status   |
 |---------|
