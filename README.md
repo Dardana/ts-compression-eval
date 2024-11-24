@@ -61,7 +61,7 @@ datasets
 │   
 └───UCR_TS_Archive_2015
 ```
-Or you can download the entire `datasets` folder directly from this [link](#). 
+Or you can download the entire `datasets` folder directly from this [link](https://www.icloud.com/iclouddrive/0f3l8v5Mb662UOiNomLK9Zljw#datasets). 
 Once you obtain the folder, place the folder in your desired directory. 
 
 5. Change the dataset directory in `_python/datasets/paths.py` to match the location of your `datasets` folder.
