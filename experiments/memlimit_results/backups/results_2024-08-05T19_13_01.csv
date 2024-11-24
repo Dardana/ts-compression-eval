@@ -1,0 +1,8 @@
+Algorithm,Compressed size,Compression speed,Dataset,Decompression speed,Filename,Memlimit,MinIters,Nbits,Nthreads,Order,Original size,Preprocs,Query,Ratio,__pyience_timestamp__
+Memcpy,75213072,9716.67,uci_gas,7367.92,rowmajor/uint8/uci_gas/ethylene_methane.dat,20,1,8,0,c,75213072,None,0,100.0,2024-08-05T19_13_01
+SprintzDelta -18,24641440,471.09,uci_gas,3114.61,rowmajor/uint8/uci_gas/ethylene_methane.dat,20,1,8,0,c,75213072,None,0,32.76,2024-08-05T19_13_01
+SprintzDelta_Huf -18,20269697,342.61,uci_gas,1137.73,rowmajor/uint8/uci_gas/ethylene_methane.dat,20,1,8,0,c,75213072,None,0,26.95,2024-08-05T19_13_01
+SprintzDelta -18,17883440,472.61,uci_gas,3096.64,rowmajor/uint8/uci_gas/ethylene_CO.dat,20,1,8,0,c,75748698,None,0,23.61,2024-08-05T19_13_01
+SprintzDelta_Huf -18,13037939,368.35,uci_gas,1311.91,rowmajor/uint8/uci_gas/ethylene_CO.dat,20,1,8,0,c,75748698,None,0,17.21,2024-08-05T19_13_01
+SprintzDelta -18,33292072,479.77,uci_gas,3247.76,rowmajor/uint8/uci_gas/uci_gas.dat,20,1,8,0,c,150961860,None,0,22.05,2024-08-05T19_13_01
+SprintzDelta_Huf -18,22956711,385.53,uci_gas,1336.9,rowmajor/uint8/uci_gas/uci_gas.dat,20,1,8,0,c,150961860,None,0,15.21,2024-08-05T19_13_01

@@ -1,0 +1,34 @@
+Algorithm,Compressed size,Compression speed,Dataset,Decompression speed,Filename,Memlimit,MinIters,Nbits,Nthreads,Order,Original size,Preprocs,Query,Ratio,__pyience_timestamp__
+Memcpy,1000000,25878.58,custom_data,9833.71,rowmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,c,1000000,None,0,100.0,2024-08-02T13_51_11
+SprintzDelta -99,1047141,859.93,custom_data,4572.87,rowmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,c,1000000,None,0,104.71,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1032409,430.85,custom_data,823.24,rowmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,c,1000000,None,0,103.24,2024-08-02T13_51_11
+SprintzDelta -99,15717374,868.76,custom_data,3555.81,rowmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,c,15007000,None,0,104.73,2024-08-02T13_51_11
+SprintzDelta_Huf -99,13654680,461.52,custom_data,711.7,rowmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,c,15007000,None,0,90.99,2024-08-02T13_51_11
+SprintzDelta -99,1047333,881.01,custom_data,4442.81,rowmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,c,1000000,None,0,104.73,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1034679,435.99,custom_data,824.1,rowmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,c,1000000,None,0,103.47,2024-08-02T13_51_11
+SprintzDelta -99,940229,825.88,custom_data,4049.81,rowmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,c,1000000,None,0,94.02,2024-08-02T13_51_11
+SprintzDelta_Huf -99,917592,438.54,custom_data,828.83,rowmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,c,1000000,None,0,91.76,2024-08-02T13_51_11
+SprintzDelta -99,1047333,857.63,custom_data,4517.2,rowmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,c,1000000,None,0,104.73,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1034457,433.95,custom_data,795.35,rowmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,c,1000000,None,0,103.45,2024-08-02T13_51_11
+SprintzDelta -99,945621,816.07,custom_data,4029.56,rowmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,c,1000000,None,0,94.56,2024-08-02T13_51_11
+SprintzDelta_Huf -99,917133,450.87,custom_data,846.25,rowmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,c,1000000,None,0,91.71,2024-08-02T13_51_11
+SprintzDelta -99,899389,847.67,custom_data,4264.01,rowmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,c,1000000,None,0,89.94,2024-08-02T13_51_11
+SprintzDelta_Huf -99,883458,466.71,custom_data,863.05,rowmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,c,1000000,None,0,88.35,2024-08-02T13_51_11
+SprintzDelta -99,1047333,879.56,custom_data,4495.84,rowmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,c,1000000,None,0,104.73,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1034538,435.72,custom_data,797.66,rowmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,c,1000000,None,0,103.45,2024-08-02T13_51_11
+SprintzDelta -99,913445,854.26,custom_data,4207.23,rowmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,c,1000000,None,0,91.34,2024-08-02T13_51_11
+SprintzDelta_Huf -99,894606,451.5,custom_data,892.49,rowmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,c,1000000,None,0,89.46,2024-08-02T13_51_11
+SprintzDelta -99,1047141,812.5,custom_data,4397.6,rowmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,c,1000000,None,0,104.71,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1032409,426.35,custom_data,811.84,rowmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,c,1000000,None,0,103.24,2024-08-02T13_51_11
+SprintzDelta -99,1047333,881.8,custom_data,4638.11,rowmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,c,1000000,None,0,104.73,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1034592,432.0,custom_data,808.4,rowmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,c,1000000,None,0,103.46,2024-08-02T13_51_11
+SprintzDelta -99,1047333,849.98,custom_data,4448.34,rowmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,c,1000000,None,0,104.73,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1034104,416.55,custom_data,816.45,rowmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,c,1000000,None,0,103.41,2024-08-02T13_51_11
+SprintzDelta -99,875373,824.05,custom_data,4300.02,rowmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,c,1000000,None,0,87.54,2024-08-02T13_51_11
+SprintzDelta_Huf -99,857678,462.2,custom_data,925.2,rowmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,c,1000000,None,0,85.77,2024-08-02T13_51_11
+SprintzDelta -99,1047333,838.13,custom_data,4363.76,rowmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,c,1000000,None,0,104.73,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1034634,423.88,custom_data,810.77,rowmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,c,1000000,None,0,103.46,2024-08-02T13_51_11
+SprintzDelta -99,1047333,812.31,custom_data,4513.92,rowmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,c,1000000,None,0,104.73,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1032780,429.93,custom_data,813.95,rowmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,c,1000000,None,0,103.28,2024-08-02T13_51_11
+SprintzDelta -99,1047141,879.15,custom_data,4557.2,rowmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,c,1000000,None,0,104.71,2024-08-02T13_51_11
+SprintzDelta_Huf -99,1032408,433.0,custom_data,807.31,rowmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,c,1000000,None,0,103.24,2024-08-02T13_51_11

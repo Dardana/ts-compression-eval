@@ -1,0 +1,178 @@
+Algorithm,Compressed size,Compression speed,Dataset,Decompression speed,Filename,Memlimit,MinIters,Nbits,Nthreads,Order,Original size,Preprocs,Query,Ratio,__pyience_timestamp__
+Memcpy,1000000,8830.57,custom_data,2698.06,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zlib -1,444413,95.43,custom_data,274.03,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,44.44,2024-08-02T14_24_13
+Zlib -9,422759,5.08,custom_data,316.25,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,42.28,2024-08-02T14_24_13
+Zstd -1,385135,389.52,custom_data,695.25,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,38.51,2024-08-02T14_24_13
+Zstd -9,417092,17.68,custom_data,484.04,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,41.71,2024-08-02T14_24_13
+LZ4,753217,426.66,custom_data,1263.78,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,75.32,2024-08-02T14_24_13
+LZO -1,673057,366.8,custom_data,488.6,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,67.31,2024-08-02T14_24_13
+LZO -9,673057,367.05,custom_data,489.13,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,67.31,2024-08-02T14_24_13
+Huffman,378617,1145.84,custom_data,1018.71,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,37.86,2024-08-02T14_24_13
+Snappy,696760,296.91,custom_data,694.43,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,69.68,2024-08-02T14_24_13
+Brotli -1,430630,170.42,custom_data,258.3,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,43.06,2024-08-02T14_24_13
+Brotli -9,419695,5.35,custom_data,345.01,colmajor/uint8/custom_data/delta_2.dat,-1,5,8,0,f,1000000,Delta,0,41.97,2024-08-02T14_24_13
+Zlib -1,2254336,219.35,custom_data,487.16,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,15.02,2024-08-02T14_24_13
+Zlib -9,1687859,3.26,custom_data,444.67,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,11.25,2024-08-02T14_24_13
+Zstd -1,1772021,663.35,custom_data,804.72,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,11.81,2024-08-02T14_24_13
+Zstd -9,1745580,82.68,custom_data,898.97,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,11.63,2024-08-02T14_24_13
+LZ4,3571673,933.27,custom_data,1343.76,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,23.8,2024-08-02T14_24_13
+LZO -1,3243466,984.8,custom_data,640.92,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,21.61,2024-08-02T14_24_13
+LZO -9,3243466,981.17,custom_data,640.05,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,21.61,2024-08-02T14_24_13
+Huffman,2842738,1012.04,custom_data,998.81,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,18.94,2024-08-02T14_24_13
+Snappy,3333201,753.75,custom_data,951.69,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,22.21,2024-08-02T14_24_13
+Brotli -1,1989804,461.86,custom_data,407.39,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,13.26,2024-08-02T14_24_13
+Brotli -9,1570273,16.69,custom_data,616.26,colmajor/uint8/custom_data/custom_data.dat,-1,5,8,0,f,15007000,Delta,0,10.46,2024-08-02T14_24_13
+Zlib -1,1000000,53.35,custom_data,0.0,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zlib -9,1000000,54.83,custom_data,0.0,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zstd -1,1000034,2388.7,custom_data,2725.69,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zstd -9,1000033,554.74,custom_data,2719.83,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+LZ4,1003923,11184.68,custom_data,2860.85,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+LZO -1,1003926,9841.45,custom_data,2250.45,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+LZO -9,1003926,4361.27,custom_data,1156.52,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+Huffman,1000064,2396.91,custom_data,2400.37,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.01,2024-08-02T14_24_13
+Snappy,1000051,9104.4,custom_data,1128.64,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.01,2024-08-02T14_24_13
+Brotli -1,1000005,2067.74,custom_data,1114.27,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Brotli -9,1000005,47.33,custom_data,2480.36,colmajor/uint8/custom_data/outliers_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zlib -1,414659,89.3,custom_data,276.61,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,41.47,2024-08-02T14_24_13
+Zlib -9,364331,2.52,custom_data,343.14,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,36.43,2024-08-02T14_24_13
+Zstd -1,376753,264.66,custom_data,607.31,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,37.68,2024-08-02T14_24_13
+Zstd -9,363418,21.28,custom_data,538.63,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,36.34,2024-08-02T14_24_13
+LZ4,617144,353.47,custom_data,1212.0,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,61.71,2024-08-02T14_24_13
+LZO -1,587610,426.58,custom_data,490.09,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,58.76,2024-08-02T14_24_13
+LZO -9,587610,427.13,custom_data,484.16,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,58.76,2024-08-02T14_24_13
+Huffman,387738,1103.7,custom_data,991.22,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,38.77,2024-08-02T14_24_13
+Snappy,567148,351.4,custom_data,804.41,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,56.71,2024-08-02T14_24_13
+Brotli -1,402355,165.14,custom_data,249.68,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,40.24,2024-08-02T14_24_13
+Brotli -9,360363,4.36,custom_data,390.77,colmajor/uint8/custom_data/outliers_1.dat,-1,5,8,0,f,1000000,Delta,0,36.04,2024-08-02T14_24_13
+Zlib -1,735314,50.1,custom_data,199.24,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,73.53,2024-08-02T14_24_13
+Zlib -9,716628,1.56,custom_data,216.85,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,71.66,2024-08-02T14_24_13
+Zstd -1,645253,345.7,custom_data,725.07,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,64.53,2024-08-02T14_24_13
+Zstd -9,687884,32.7,custom_data,524.87,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,68.79,2024-08-02T14_24_13
+LZ4,930093,612.51,custom_data,1406.83,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,93.01,2024-08-02T14_24_13
+LZO -1,899579,406.14,custom_data,538.71,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,89.96,2024-08-02T14_24_13
+LZO -9,899579,405.79,custom_data,538.3,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,89.96,2024-08-02T14_24_13
+Huffman,627627,1032.93,custom_data,886.42,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,62.76,2024-08-02T14_24_13
+Snappy,911149,394.16,custom_data,987.71,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,91.11,2024-08-02T14_24_13
+Brotli -1,671247,172.81,custom_data,141.08,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,67.12,2024-08-02T14_24_13
+Brotli -9,713252,6.39,custom_data,162.33,colmajor/uint8/custom_data/repeats_50.dat,-1,5,8,0,f,1000000,Delta,0,71.33,2024-08-02T14_24_13
+Zlib -1,642379,58.8,custom_data,207.5,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,64.24,2024-08-02T14_24_13
+Zlib -9,612162,4.35,custom_data,216.72,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,61.22,2024-08-02T14_24_13
+Zstd -1,616766,323.66,custom_data,643.57,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,61.68,2024-08-02T14_24_13
+Zstd -9,595684,29.35,custom_data,513.11,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,59.57,2024-08-02T14_24_13
+LZ4,863361,528.56,custom_data,1257.43,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,86.34,2024-08-02T14_24_13
+LZO -1,818168,352.1,custom_data,461.54,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,81.82,2024-08-02T14_24_13
+LZO -9,818168,350.91,custom_data,463.32,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,81.82,2024-08-02T14_24_13
+Huffman,609844,1118.08,custom_data,878.71,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,60.98,2024-08-02T14_24_13
+Snappy,826144,324.82,custom_data,803.09,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,82.61,2024-08-02T14_24_13
+Brotli -1,626198,169.33,custom_data,211.65,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,62.62,2024-08-02T14_24_13
+Brotli -9,598035,7.3,custom_data,242.26,colmajor/uint8/custom_data/outliers_20.dat,-1,5,8,0,f,1000000,Delta,0,59.8,2024-08-02T14_24_13
+Zlib -1,426167,84.39,custom_data,263.51,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,42.62,2024-08-02T14_24_13
+Zlib -9,373917,2.23,custom_data,322.97,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,37.39,2024-08-02T14_24_13
+Zstd -1,384534,262.11,custom_data,594.27,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,38.45,2024-08-02T14_24_13
+Zstd -9,372125,21.89,custom_data,545.28,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,37.21,2024-08-02T14_24_13
+LZ4,622750,356.94,custom_data,1222.59,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,62.28,2024-08-02T14_24_13
+LZO -1,582721,423.21,custom_data,496.25,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,58.27,2024-08-02T14_24_13
+LZO -9,582721,423.96,custom_data,497.28,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,58.27,2024-08-02T14_24_13
+Huffman,387298,1088.92,custom_data,972.99,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,38.73,2024-08-02T14_24_13
+Snappy,567882,349.91,custom_data,803.24,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,56.79,2024-08-02T14_24_13
+Brotli -1,410282,166.24,custom_data,244.02,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,41.03,2024-08-02T14_24_13
+Brotli -9,369444,4.51,custom_data,384.26,colmajor/uint8/custom_data/outliers_2.dat,-1,5,8,0,f,1000000,Delta,0,36.94,2024-08-02T14_24_13
+Zlib -1,879208,41.87,custom_data,221.55,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,87.92,2024-08-02T14_24_13
+Zlib -9,870199,10.98,custom_data,229.17,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,87.02,2024-08-02T14_24_13
+Zstd -1,817135,844.32,custom_data,747.86,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,81.71,2024-08-02T14_24_13
+Zstd -9,834783,46.23,custom_data,591.53,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,83.48,2024-08-02T14_24_13
+LZ4,1002158,2280.42,custom_data,2250.66,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,100.22,2024-08-02T14_24_13
+LZO -1,1003827,5069.43,custom_data,1076.65,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,100.38,2024-08-02T14_24_13
+LZO -9,1003827,5107.02,custom_data,1045.23,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,100.38,2024-08-02T14_24_13
+Huffman,817025,1031.97,custom_data,774.65,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,81.7,2024-08-02T14_24_13
+Snappy,1000110,8317.67,custom_data,2711.91,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,100.01,2024-08-02T14_24_13
+Brotli -1,817992,326.81,custom_data,145.61,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,81.8,2024-08-02T14_24_13
+Brotli -9,858507,7.81,custom_data,179.38,colmajor/uint8/custom_data/repeats_30.dat,-1,5,8,0,f,1000000,Delta,0,85.85,2024-08-02T14_24_13
+Zlib -1,530851,69.35,custom_data,229.46,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,53.09,2024-08-02T14_24_13
+Zlib -9,489654,2.68,custom_data,249.18,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,48.97,2024-08-02T14_24_13
+Zstd -1,497736,289.24,custom_data,609.44,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,49.77,2024-08-02T14_24_13
+Zstd -9,478897,27.86,custom_data,532.28,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,47.89,2024-08-02T14_24_13
+LZ4,736703,424.98,custom_data,1276.43,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,73.67,2024-08-02T14_24_13
+LZO -1,687771,344.11,custom_data,454.1,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,68.78,2024-08-02T14_24_13
+LZO -9,687771,344.41,custom_data,465.82,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,68.78,2024-08-02T14_24_13
+Huffman,497379,1111.64,custom_data,926.04,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,49.74,2024-08-02T14_24_13
+Snappy,693838,302.79,custom_data,735.5,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,69.38,2024-08-02T14_24_13
+Brotli -1,513624,164.08,custom_data,212.82,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,51.36,2024-08-02T14_24_13
+Brotli -9,478291,6.06,custom_data,304.41,colmajor/uint8/custom_data/outliers_10.dat,-1,5,8,0,f,1000000,Delta,0,47.83,2024-08-02T14_24_13
+Zlib -1,444414,96.47,custom_data,274.06,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,44.44,2024-08-02T14_24_13
+Zlib -9,422759,5.06,custom_data,315.68,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,42.28,2024-08-02T14_24_13
+Zstd -1,385135,386.19,custom_data,760.29,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,38.51,2024-08-02T14_24_13
+Zstd -9,417091,17.22,custom_data,476.38,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,41.71,2024-08-02T14_24_13
+LZ4,753218,427.05,custom_data,1262.18,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,75.32,2024-08-02T14_24_13
+LZO -1,673065,366.78,custom_data,489.36,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,67.31,2024-08-02T14_24_13
+LZO -9,673065,366.94,custom_data,488.69,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,67.31,2024-08-02T14_24_13
+Huffman,378617,1143.57,custom_data,1016.95,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,37.86,2024-08-02T14_24_13
+Snappy,696762,295.51,custom_data,690.51,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,69.68,2024-08-02T14_24_13
+Brotli -1,430630,169.19,custom_data,255.41,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,43.06,2024-08-02T14_24_13
+Brotli -9,419694,5.32,custom_data,346.96,colmajor/uint8/custom_data/delta_1.dat,-1,5,8,0,f,1000000,Delta,0,41.97,2024-08-02T14_24_13
+Zlib -1,973218,41.08,custom_data,275.6,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,97.32,2024-08-02T14_24_13
+Zlib -9,966275,37.82,custom_data,281.84,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,96.63,2024-08-02T14_24_13
+Zstd -1,961065,954.63,custom_data,769.57,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,96.11,2024-08-02T14_24_13
+Zstd -9,961069,405.54,custom_data,758.47,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,96.11,2024-08-02T14_24_13
+LZ4,1003923,10530.86,custom_data,1345.79,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+LZO -1,1003926,7922.86,custom_data,1103.88,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+LZO -9,1003926,8549.93,custom_data,2260.19,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+Huffman,961013,1019.73,custom_data,793.15,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,96.1,2024-08-02T14_24_13
+Snappy,1000051,10031.4,custom_data,1151.08,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,100.01,2024-08-02T14_24_13
+Brotli -1,961362,371.32,custom_data,227.27,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,96.14,2024-08-02T14_24_13
+Brotli -9,961545,35.44,custom_data,226.77,colmajor/uint8/custom_data/repeats_10.dat,-1,5,8,0,f,1000000,Delta,0,96.15,2024-08-02T14_24_13
+Zlib -1,545284,63.91,custom_data,208.1,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,54.53,2024-08-02T14_24_13
+Zlib -9,498284,0.86,custom_data,250.98,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,49.83,2024-08-02T14_24_13
+Zstd -1,479599,294.09,custom_data,580.13,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,47.96,2024-08-02T14_24_13
+Zstd -9,494016,34.52,custom_data,549.19,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,49.4,2024-08-02T14_24_13
+LZ4,697799,448.94,custom_data,1210.46,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,69.78,2024-08-02T14_24_13
+LZO -1,676507,343.23,custom_data,379.5,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,67.65,2024-08-02T14_24_13
+LZO -9,676507,342.93,custom_data,378.75,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,67.65,2024-08-02T14_24_13
+Huffman,430636,916.39,custom_data,964.51,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,43.06,2024-08-02T14_24_13
+Snappy,704406,297.81,custom_data,666.97,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,70.44,2024-08-02T14_24_13
+Brotli -1,505822,174.56,custom_data,179.37,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,50.58,2024-08-02T14_24_13
+Brotli -9,503938,6.6,custom_data,257.95,colmajor/uint8/custom_data/repeats_70.dat,-1,5,8,0,f,1000000,Delta,0,50.39,2024-08-02T14_24_13
+Zlib -1,466219,77.52,custom_data,246.35,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,46.62,2024-08-02T14_24_13
+Zlib -9,417676,2.23,custom_data,285.68,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,41.77,2024-08-02T14_24_13
+Zstd -1,427706,271.51,custom_data,601.12,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,42.77,2024-08-02T14_24_13
+Zstd -9,411952,25.21,custom_data,545.93,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,41.2,2024-08-02T14_24_13
+LZ4,665041,374.8,custom_data,1257.14,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,66.5,2024-08-02T14_24_13
+LZO -1,614651,385.82,custom_data,489.72,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,61.47,2024-08-02T14_24_13
+LZO -9,614651,385.31,custom_data,489.67,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,61.47,2024-08-02T14_24_13
+Huffman,424056,1096.02,custom_data,953.49,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,42.41,2024-08-02T14_24_13
+Snappy,611777,326.93,custom_data,774.54,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,61.18,2024-08-02T14_24_13
+Brotli -1,449198,164.83,custom_data,225.06,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,44.92,2024-08-02T14_24_13
+Brotli -9,410594,5.07,custom_data,346.62,colmajor/uint8/custom_data/outliers_5.dat,-1,5,8,0,f,1000000,Delta,0,41.06,2024-08-02T14_24_13
+Zlib -1,1000000,53.29,custom_data,0.0,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zlib -9,1000000,54.69,custom_data,0.0,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zstd -1,1000034,2334.78,custom_data,1559.95,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zstd -9,1000033,555.92,custom_data,2736.91,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+LZ4,1003923,9592.69,custom_data,2746.46,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+LZO -1,1003926,9217.95,custom_data,2733.83,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+LZO -9,1003926,9350.08,custom_data,2728.97,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.39,2024-08-02T14_24_13
+Huffman,1000064,2956.44,custom_data,2942.74,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.01,2024-08-02T14_24_13
+Snappy,1000051,10484.49,custom_data,2759.53,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.01,2024-08-02T14_24_13
+Brotli -1,1000005,4505.38,custom_data,2552.8,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Brotli -9,1000005,47.07,custom_data,2479.3,colmajor/uint8/custom_data/repeats_0.dat,-1,5,8,0,f,1000000,Delta,0,100.0,2024-08-02T14_24_13
+Zlib -1,277196,127.9,custom_data,299.13,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,27.72,2024-08-02T14_24_13
+Zlib -9,220315,1.18,custom_data,387.68,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,22.03,2024-08-02T14_24_13
+Zstd -1,241213,333.0,custom_data,497.02,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,24.12,2024-08-02T14_24_13
+Zstd -9,223520,56.44,custom_data,699.16,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,22.35,2024-08-02T14_24_13
+LZ4,351335,528.79,custom_data,1106.25,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,35.13,2024-08-02T14_24_13
+LZO -1,365233,542.53,custom_data,270.93,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,36.52,2024-08-02T14_24_13
+LZO -9,365233,541.48,custom_data,483.75,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,36.52,2024-08-02T14_24_13
+Huffman,233598,851.01,custom_data,999.79,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,23.36,2024-08-02T14_24_13
+Snappy,350031,441.61,custom_data,783.45,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,35.0,2024-08-02T14_24_13
+Brotli -1,256054,252.11,custom_data,297.76,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,25.61,2024-08-02T14_24_13
+Brotli -9,223097,10.91,custom_data,498.76,colmajor/uint8/custom_data/repeats_90.dat,-1,5,8,0,f,1000000,Delta,0,22.31,2024-08-02T14_24_13
+Zlib -1,444419,96.18,custom_data,275.51,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,44.44,2024-08-02T14_24_13
+Zlib -9,422761,5.08,custom_data,315.01,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,42.28,2024-08-02T14_24_13
+Zstd -1,385133,386.18,custom_data,758.2,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,38.51,2024-08-02T14_24_13
+Zstd -9,417099,17.55,custom_data,484.41,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,41.71,2024-08-02T14_24_13
+LZ4,753178,426.93,custom_data,1261.85,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,75.32,2024-08-02T14_24_13
+LZO -1,673045,366.99,custom_data,489.56,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,67.3,2024-08-02T14_24_13
+LZO -9,673045,367.16,custom_data,484.96,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,67.3,2024-08-02T14_24_13
+Huffman,378619,1148.23,custom_data,1015.66,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,37.86,2024-08-02T14_24_13
+Snappy,696742,295.45,custom_data,694.85,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,69.67,2024-08-02T14_24_13
+Brotli -1,430627,166.8,custom_data,257.58,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,43.06,2024-08-02T14_24_13
+Brotli -9,419715,5.51,custom_data,347.76,colmajor/uint8/custom_data/delta_10.dat,-1,5,8,0,f,1000000,Delta,0,41.97,2024-08-02T14_24_13

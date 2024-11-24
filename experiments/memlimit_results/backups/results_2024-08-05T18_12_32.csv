@@ -1,0 +1,35 @@
+Algorithm,Compressed size,Compression speed,Dataset,Decompression speed,Filename,Memlimit,MinIters,Nbits,Nthreads,Order,Original size,Preprocs,Query,Ratio,__pyience_timestamp__
+Memcpy,75213072,9225.93,uci_gas,7551.61,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,100.0,2024-08-05T18_12_32
+Zlib -1,21299755,68.22,uci_gas,310.01,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,28.32,2024-08-05T18_12_32
+Zlib -9,19453024,6.96,uci_gas,315.21,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,25.86,2024-08-05T18_12_32
+Zstd -1,23015974,270.72,uci_gas,474.27,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,30.6,2024-08-05T18_12_32
+Zstd -9,20507629,23.49,uci_gas,556.38,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,27.27,2024-08-05T18_12_32
+LZ4,42036390,499.23,uci_gas,1193.72,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,55.89,2024-08-05T18_12_32
+LZO -1,34565745,570.06,uci_gas,633.96,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,45.96,2024-08-05T18_12_32
+LZO -9,34565745,571.08,uci_gas,634.06,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,45.96,2024-08-05T18_12_32
+Huffman,34086285,880.73,uci_gas,887.26,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,45.32,2024-08-05T18_12_32
+Snappy,35151335,435.15,uci_gas,0.0,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,46.74,2024-08-05T18_12_32
+Brotli -1,25491053,224.35,uci_gas,283.3,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,33.89,2024-08-05T18_12_32
+Brotli -9,18782841,3.35,uci_gas,301.91,colmajor/uint8/uci_gas/ethylene_methane.dat,10,1,8,0,f,75213072,None,0,24.97,2024-08-05T18_12_32
+Zlib -1,13564464,135.76,uci_gas,413.73,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,17.91,2024-08-05T18_12_32
+Zlib -9,11644668,8.57,uci_gas,376.95,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,15.37,2024-08-05T18_12_32
+Zstd -1,14037092,358.01,uci_gas,552.89,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,18.53,2024-08-05T18_12_32
+Zstd -9,12220986,27.99,uci_gas,768.14,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,16.13,2024-08-05T18_12_32
+LZ4,28206302,687.64,uci_gas,1340.17,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,37.24,2024-08-05T18_12_32
+LZO -1,22390647,781.47,uci_gas,745.32,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,29.56,2024-08-05T18_12_32
+LZO -9,22390647,783.01,uci_gas,745.38,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,29.56,2024-08-05T18_12_32
+Huffman,27056380,944.61,uci_gas,1024.22,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,35.72,2024-08-05T18_12_32
+Snappy,22883051,574.67,uci_gas,1005.32,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,30.21,2024-08-05T18_12_32
+Brotli -1,15554499,279.27,uci_gas,313.59,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,20.53,2024-08-05T18_12_32
+Brotli -9,11474257,6.35,uci_gas,395.59,colmajor/uint8/uci_gas/ethylene_CO.dat,10,1,8,0,f,75748698,None,0,15.15,2024-08-05T18_12_32
+Zlib -1,24136251,145.95,uci_gas,431.23,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,15.99,2024-08-05T18_12_32
+Zlib -9,19805189,7.26,uci_gas,406.91,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,13.12,2024-08-05T18_12_32
+Zstd -1,24313305,382.61,uci_gas,572.68,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,16.11,2024-08-05T18_12_32
+Zstd -9,20896576,27.1,uci_gas,842.72,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,13.84,2024-08-05T18_12_32
+LZ4,51076858,750.92,uci_gas,1348.87,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,33.83,2024-08-05T18_12_32
+LZO -1,40608373,858.67,uci_gas,762.1,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,26.9,2024-08-05T18_12_32
+LZO -9,40608373,856.04,uci_gas,758.81,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,26.9,2024-08-05T18_12_32
+Huffman,50848840,934.15,uci_gas,1020.43,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,33.68,2024-08-05T18_12_32
+Snappy,40734372,613.6,uci_gas,1003.84,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,26.98,2024-08-05T18_12_32
+Brotli -1,26513158,296.24,uci_gas,317.35,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,17.56,2024-08-05T18_12_32
+Brotli -9,19672985,7.67,uci_gas,444.92,colmajor/uint8/uci_gas/uci_gas.dat,10,1,8,0,f,150961860,None,0,13.03,2024-08-05T18_12_32
