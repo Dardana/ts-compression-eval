@@ -22,11 +22,20 @@ This fork further extends the capabilities of the Sprintz benchmark with several
 - **X86 Architecture**: This project requires an X86 architecture to run. It is not compatible with ARM or other architectures at this time.
 
 ### Installation
-
+1. Clone this repository:
+```
+git clone https://github.com/Dardana/ts-compression-eval.git
+``` 
+2. Navigate to the repository:
+```
+cd ts-compression-benchmark
+``` 
 ### Compilation
+To compile the project, simply run:
 ```
 make
 ```
+Ensure that both `make` and `clang` are installed on your system for the compilation process to work properly.
 ### Repository Structure
 
 ## Acknowledgments
