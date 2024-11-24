@@ -86,6 +86,10 @@ python3 -m _python.main --sweep algos=SprintzDelta,SprintzDelta_16b,SprintzDelta
 ```
 This flexibility allows you to test specific configurations or algorithms without needing to run the entire suite of experiments.
 
+9. Accessing Experiment Results: If you run the experiments yourself, the results will be automatically saved in the _python/results folder.
+
+10. Plotting Results: To reproduce the figures from the thesis or visualize your own results, use the scripts provided in _python/experiments/figs. These scripts are designed to generate the same types of plots used in the thesis, based on the experimental outputs.
+
 ## Acknowledgments
 
 This project builds upon the original lzbench benchmark and its predecessors. Special thanks to the open-source community for their contributions to the field of data compression.
