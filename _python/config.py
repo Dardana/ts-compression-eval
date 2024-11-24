@@ -11,8 +11,8 @@ import matplotlib as mpl
 from . import files
 
 # change this if you aren't me
-DATASETS_DIR = os.path.expanduser('/mnt/c/Users/Albana\ Jaha/Desktop/MT/datasets/compress/')
-#DATASETS_DIR_FLOAT = os.path.expanduser('/mnt/c/Users/Albana\ Jaha/Desktop/MT/datasets/custom_data/')
+DATASETS_DIR = os.path.expanduser('/root/datasets/compress/')
+#DATASETS_DIR_FLOAT = os.path.expanduser('/root/datasets/custom_data/')
 
 FIG_SAVE_DIR = 'figs'
 RESULTS_SAVE_DIR = 'results'
