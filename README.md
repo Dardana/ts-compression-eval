@@ -26,6 +26,7 @@ This fork further extends the capabilities of the Sprintz benchmark with several
 - **Joblib**: For caching function output.
 - **Pandas**: For storing results and reading in data.
 - **Matplotlib**: For plotting, if you want to reproduce the figures.
+- **Numpy**: Required for numerical computations and handling datasets.
 
 ### Datasets
 - **MSRC-12**: Kinect readings as subjects performed various actions. Link: [MSRC-12 Dataset](https://www.microsoft.com/en-us/download/details.aspx?id=52283?from=https://research.microsoft.com/en-us/um/cambridge/projects/msrc12/&type=exact)
@@ -48,13 +49,19 @@ make
 ```
 4. Obtain datasets: 
 Download the datasets listed above and generate the synthetic dataset using the provided script. The datasets need to be saved in a following repository structure: 
-datasets
-  mrsc
+-datasets
+  -custom_data
+  -MSRC-12
+  -uci-gas-sensor
+  -UCR_TS_Archive_2015
   
 6. Change the dataset directory in `_python/datasets/paths.py` to match your dataset directory. For example /root/datasets
 7. navigate to the repository ts-compression-benchmark
-8. 
-
+8. Initialize datasets
+'''
+python3 -m _python.datasets.compress_bench
+'''
+9. 
 ## Acknowledgments
 
 This project builds upon the original lzbench benchmark and its predecessors. Special thanks to the open-source community for their contributions to the field of data compression.
