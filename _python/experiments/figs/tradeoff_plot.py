@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from math import pi
 
 # Load your data
-file_path = '/Users/UniBe/Desktop/experiments/1_results_all_datasets/merged_results.csv'
+file_path = '/experiments/1_results_all_datasets/merged_results.csv'
 data = pd.read_csv(file_path, low_memory=False)
 
 # Filtering the data according to your criteria
