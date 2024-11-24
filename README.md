@@ -50,7 +50,15 @@ make
 4. Obtain datasets: 
 Download the datasets listed above and generate the synthetic dataset using the provided script. The datasets need to be saved in the following directory structure:
 ```
-datasets/ ├── custom_data/ # Synthetic datasets (e.g., generated with _python/generate_datasets.py) ├── MSRC-12/ # Kinect readings dataset ├── uci-gas-sensor/ # UCI Gas Sensor dataset └── UCR_TS_Archive_2015/ # UCR Time Series Archive
+datasets
+│  
+└───custom_data
+│   
+└───MSRC-12
+│   
+└───uci-gas-sensor
+│   
+└───UCR_TS_Archive_2015
 ```
 Or you can download the entire `datasets` folder directly from this [link](#). 
 Once you obtain the folder, place the folder in your desired directory. 
