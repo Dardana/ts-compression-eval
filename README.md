@@ -48,20 +48,24 @@ cd ts-compression-benchmark
 make
 ```
 4. Obtain datasets: 
-Download the datasets listed above and generate the synthetic dataset using the provided script. The datasets need to be saved in a following repository structure: 
--datasets
-  -custom_data
-  -MSRC-12
-  -uci-gas-sensor
-  -UCR_TS_Archive_2015
-  
-6. Change the dataset directory in `_python/datasets/paths.py` to match your dataset directory. For example /root/datasets
-7. navigate to the repository ts-compression-benchmark
-8. Initialize datasets
-'''
+Download the datasets listed above and generate the synthetic dataset using the provided script. The datasets need to be saved in the following directory structure:
+```
+datasets/ ├── custom_data/ # Synthetic datasets (e.g., generated with _python/generate_datasets.py) ├── MSRC-12/ # Kinect readings dataset ├── uci-gas-sensor/ # UCI Gas Sensor dataset └── UCR_TS_Archive_2015/ # UCR Time Series Archive
+```
+Or you can download the entire `datasets` folder directly from this [link](#). 
+Once you obtain the folder, place the folder in your desired directory. 
+
+Change the dataset directory in `_python/datasets/paths.py` to match the location of your `datasets` folder. For example: 
+```
+/root/datasets
+```
+6. Navigate back to the repository `ts-compression-benchmark`.
+
+7. Initialize datasets:
+```
 python3 -m _python.datasets.compress_bench
-'''
-9. 
+```
+8. Run different experiments found in `_python/experiments`.
 ## Acknowledgments
 
 This project builds upon the original lzbench benchmark and its predecessors. Special thanks to the open-source community for their contributions to the field of data compression.
