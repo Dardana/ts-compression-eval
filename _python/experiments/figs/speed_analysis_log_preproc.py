@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.ticker as ticker
 
 # Load and prepare the data
-data = pd.read_csv('/Users/UniBe/Desktop/experiments/merged_results.csv')
+data = pd.read_csv('/experiments/merged_results.csv')
 data = data[data['Algorithm'] != 'Memcpy']
 data['Preprocs'] = data['Preprocs'].fillna('None')
 data['DataType'] = data['Filename'].apply(lambda x: x.split('/')[1])
