@@ -69,16 +69,22 @@ For example:
 ```
 /root/datasets
 ```
-7. Initialize datasets from `ts-compression-benchmark`:
+6. Initialize datasets from `ts-compression-benchmark`:
 ```
 python3 -m _python.datasets.compress_bench
 ```
-8. The initialization step creates a new folder `compress` inside the `datasets` folder. Now, you need to change the directory in `_python/config.py` to match the location of your `compress` folder.  
+7. The initialization step creates a new folder `compress` inside the `datasets` folder. Now, you need to change the directory in `_python/config.py` to match the location of your `compress` folder.  
 For example:
 ```
 /root/datasets/compress
 ```
-10. Run different experiments found in `_python/experiments`.
+8. Run different experiments found in `_python/experiments`. Each folder in the `experiments` directory contains a script `experiments.sh`, which can be used to run all experiments for that dataset or preprocessing setup automatically. Note that running all experiments can take several hours depending on the dataset and preprocessing configurations.
+
+If you prefer, you can run a single experiment manually by copying the command from the `experiments.sh` file and executing it. For example, to run an experiment with the UCI Gas dataset and a minimum iteration count of 1, you can run the following from `ts-compression-benchmark`:
+```
+python3 -m _python.main --sweep algos=SprintzDelta,SprintzDelta_16b,SprintzDelta_Huf,SprintzDelta_Huf_16b,Zlib,Zstd,LZ4,LZO,Huffman,Snappy,Brotli --dsets=uci_gas --miniters=1
+```
+This flexibility allows you to test specific configurations or algorithms without needing to run the entire suite of experiments.
 
 ## Acknowledgments
 
