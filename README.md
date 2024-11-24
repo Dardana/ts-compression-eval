@@ -16,21 +16,22 @@ This fork further extends the capabilities of the Sprintz benchmark with several
 - **Enhanced Evaluation Framework**: Built to align with the experimental setup of the master's thesis, this fork allows for a comprehensive comparison of various lossless compression algorithms, both general-purpose and specialized for time series data.
 
 ## Reproduction of Results
+
 ### Prerequisites
 - **X86 Architecture**: This project requires an X86 architecture to run. It is not compatible with ARM or other architectures at this time.
+  
 ### Dependencies
 - **Make**: Required to build the project.
 - **Clang**: Ensure you have Clang installed as the code depends on it for compilation.
 - **Joblib**: For caching function output.
 - **Pandas**: For storing results and reading in data.
-- **Matplotlib**: For plotting, if you want to reproduce our figures.
+- **Matplotlib**: For plotting, if you want to reproduce the figures.
 
 ### Datasets
-The datasets used include:
-- **MSRC-12**: Kinect readings as subjects performed various actions.
-- **UCI Gas**: Measurements of gas concentrations over time.
-- **UCR Archive**: A collection of 85 time series datasets.
-- **Synthetic Dataset**: Features like repeats, deltas and outliers.
+- **MSRC-12**: Kinect readings as subjects performed various actions. Link: [MSRC-12 Dataset](https://www.microsoft.com/en-us/download/details.aspx?id=52283?from=https://research.microsoft.com/en-us/um/cambridge/projects/msrc12/&type=exact)
+- **UCI Gas**: Measurements of gas concentrations over time. Link: [UCI Gas Dataset](https://archive.ics.uci.edu/dataset/322/gas+sensor+array+under+dynamic+gas+mixtures)  
+- **UCR Archive**: A collection of 85 time series datasets. Link: [UCR Archive](https://www.cs.ucr.edu/~eamonn/time_series_data/)  
+- **Synthetic Dataset**: Features like repeats, deltas, and outliers. Code to generate this dataset can be found in `_python/generate_datasets.py`.
 
 ### Run Experiments
 1. Clone this repository:
@@ -46,11 +47,9 @@ cd ts-compression-benchmark
 make
 ```
 4. Obtain datasets: 
-Download the datasets with the
+Download the datasets listed above and generate the synthetic dataset using the provided script. The datasets need to be saved in a following repository structure: 
 
-5. Change the dataset directory in _python/datasets/paths.py to your dataset directory 
-
-Repository Structure
+5. Change the dataset directory in `_python/datasets/paths.py` to match your dataset directory. 
 
 ## Acknowledgments
 
