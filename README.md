@@ -15,13 +15,25 @@ This fork further extends the capabilities of the Sprintz benchmark with several
 -  **Custom Data for Analysis**: Added custom datasets specifically designed to analyze the impact of data features (such as repeats, deltas and outliers) on compression performance. This feature enables users to evaluate how different data characteristics affect the efficiency of various compression algorithms.
 - **Enhanced Evaluation Framework**: Built to align with the experimental setup of the master's thesis, this fork allows for a comprehensive comparison of various lossless compression algorithms, both general-purpose and specialized for time series data.
 
-## Getting Started
+## Reproduction of Results
+
 ### Prerequisites
+- **X86 Architecture**: This project requires an X86 architecture to run. It is not compatible with ARM or other architectures at this time.
+  
+### Dependencies
 - **Make**: Required to build the project.
 - **Clang**: Ensure you have Clang installed as the code depends on it for compilation.
-- **X86 Architecture**: This project requires an X86 architecture to run. It is not compatible with ARM or other architectures at this time.
+- **Joblib**: For caching function output.
+- **Pandas**: For storing results and reading in data.
+- **Matplotlib**: For plotting, if you want to reproduce the figures.
 
-### Installation
+### Datasets
+- **MSRC-12**: Kinect readings as subjects performed various actions. Link: [MSRC-12 Dataset](https://www.microsoft.com/en-us/download/details.aspx?id=52283?from=https://research.microsoft.com/en-us/um/cambridge/projects/msrc12/&type=exact)
+- **UCI Gas**: Measurements of gas concentrations over time. Link: [UCI Gas Dataset](https://archive.ics.uci.edu/dataset/322/gas+sensor+array+under+dynamic+gas+mixtures)  
+- **UCR Archive**: A collection of 85 time series datasets. Link: [UCR Archive](https://www.cs.ucr.edu/~eamonn/time_series_data/)  
+- **Synthetic Dataset**: Features like repeats, deltas, and outliers. Code to generate this dataset can be found in `_python/generate_datasets.py`.
+
+### Run Experiments
 1. Clone this repository:
 ```
 git clone https://github.com/Dardana/ts-compression-eval.git
@@ -29,14 +41,19 @@ git clone https://github.com/Dardana/ts-compression-eval.git
 2. Navigate to the repository:
 ```
 cd ts-compression-benchmark
-``` 
-### Compilation
-To compile the project, simply run:
+```
+3. Compile the project:
 ```
 make
 ```
-Ensure that both `make` and `clang` are installed on your system for the compilation process to work properly.
-### Repository Structure
+4. Obtain datasets: 
+Download the datasets listed above and generate the synthetic dataset using the provided script. The datasets need to be saved in a following repository structure: 
+datasets
+  mrsc
+  
+6. Change the dataset directory in `_python/datasets/paths.py` to match your dataset directory. For example /root/datasets
+7. navigate to the repository ts-compression-benchmark
+8. 
 
 ## Acknowledgments
 
