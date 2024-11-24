@@ -27,6 +27,7 @@ This fork further extends the capabilities of the Sprintz benchmark with several
 - **Pandas**: For storing results and reading in data.
 - **Matplotlib**: For plotting, if you want to reproduce the figures.
 - **Numpy**: Required for numerical computations and handling datasets.
+- **Sklearn**: Required for various machine learning utilities, such as preprocessing and evaluation, used in experiments.
 
 ### Datasets
 - **MSRC-12**: Kinect readings as subjects performed various actions. Link: [MSRC-12 Dataset](https://www.microsoft.com/en-us/download/details.aspx?id=52283?from=https://research.microsoft.com/en-us/um/cambridge/projects/msrc12/&type=exact)
@@ -72,7 +73,12 @@ For example:
 ```
 python3 -m _python.datasets.compress_bench
 ```
-8. Run different experiments found in `_python/experiments`.
+8. The initialization step creates a new folder `compress` inside the `datasets` folder. Now, you need to change the directory in `_python/config.py` to match the location of your `compress` folder.  
+For example:
+```
+/root/datasets/compress
+```
+10. Run different experiments found in `_python/experiments`.
 
 ## Acknowledgments
 
