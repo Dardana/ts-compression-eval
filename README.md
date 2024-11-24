@@ -17,31 +17,17 @@ This fork further extends the capabilities of the Sprintz benchmark with several
 
 ## Getting Started
 ### Prerequisites
-
+- **Make**: Required to build the project.
+- **Clang**: Ensure you have Clang installed as the code depends on it for compilation.
+- **X86 Architecture**: This project requires an X86 architecture to run. It is not compatible with ARM or other architectures at this time.
 
 ### Installation
 
 ### Compilation
-
-### Repository Structure
-
-For Linux/MacOS/MinGW (Windows):
 ```
 make
 ```
-
-For 32-bit compilation:
-```
-make BUILD_ARCH=32-bit
-
-```
-
-<!-- lzbench was tested with:
-
-- Ubuntu: gcc 4.6.3, 4.8.4 (both 32-bit and 64-bit), 4.9.3, 5.3.0, 6.1.1 and clang 3.4, 3.5, 3.6, 3.8
-- MacOS: Apple LLVM version 6.0
-- MinGW (Windows): gcc 5.3.0, 4.9.3 (32-bit), 4.8.3 (32-bit)
- -->
+### Repository Structure
 
 ## Acknowledgments
 
