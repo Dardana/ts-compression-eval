@@ -15,13 +15,24 @@ This fork further extends the capabilities of the Sprintz benchmark with several
 -  **Custom Data for Analysis**: Added custom datasets specifically designed to analyze the impact of data features (such as repeats, deltas and outliers) on compression performance. This feature enables users to evaluate how different data characteristics affect the efficiency of various compression algorithms.
 - **Enhanced Evaluation Framework**: Built to align with the experimental setup of the master's thesis, this fork allows for a comprehensive comparison of various lossless compression algorithms, both general-purpose and specialized for time series data.
 
-## Getting Started
+## Reproduction of Results
 ### Prerequisites
+- **X86 Architecture**: This project requires an X86 architecture to run. It is not compatible with ARM or other architectures at this time.
+### Dependencies
 - **Make**: Required to build the project.
 - **Clang**: Ensure you have Clang installed as the code depends on it for compilation.
-- **X86 Architecture**: This project requires an X86 architecture to run. It is not compatible with ARM or other architectures at this time.
+- **Joblib**: For caching function output.
+- **Pandas**: For storing results and reading in data.
+- **Matplotlib**: For plotting, if you want to reproduce our figures.
 
-### Installation
+### Datasets
+The datasets used include:
+- **MSRC-12**: Kinect readings as subjects performed various actions.
+- **UCI Gas**: Measurements of gas concentrations over time.
+- **UCR Archive**: A collection of 85 time series datasets.
+- **Synthetic Dataset**: Features like repeats, deltas and outliers.
+
+### Run Experiments
 1. Clone this repository:
 ```
 git clone https://github.com/Dardana/ts-compression-eval.git
@@ -29,14 +40,17 @@ git clone https://github.com/Dardana/ts-compression-eval.git
 2. Navigate to the repository:
 ```
 cd ts-compression-benchmark
-``` 
-### Compilation
-To compile the project, simply run:
+```
+3. Compile the project:
 ```
 make
 ```
-Ensure that both `make` and `clang` are installed on your system for the compilation process to work properly.
-### Repository Structure
+4. Obtain datasets: 
+Download the datasets with the
+
+5. Change the dataset directory in _python/datasets/paths.py to your dataset directory 
+
+Repository Structure
 
 ## Acknowledgments
 
