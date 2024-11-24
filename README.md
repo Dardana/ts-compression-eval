@@ -63,17 +63,17 @@ datasets
 Or you can download the entire `datasets` folder directly from this [link](#). 
 Once you obtain the folder, place the folder in your desired directory. 
 
-Change the dataset directory in `_python/datasets/paths.py` to match the location of your `datasets` folder. For example: 
+5. Change the dataset directory in `_python/datasets/paths.py` to match the location of your `datasets` folder.
+For example: 
 ```
 /root/datasets
 ```
-6. Navigate back to the repository `ts-compression-benchmark`.
-
-7. Initialize datasets:
+7. Initialize datasets from `ts-compression-benchmark`:
 ```
 python3 -m _python.datasets.compress_bench
 ```
 8. Run different experiments found in `_python/experiments`.
+
 ## Acknowledgments
 
 This project builds upon the original lzbench benchmark and its predecessors. Special thanks to the open-source community for their contributions to the field of data compression.
