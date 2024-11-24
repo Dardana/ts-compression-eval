@@ -86,7 +86,11 @@ python3 -m _python.main --sweep algos=SprintzDelta,SprintzDelta_16b,SprintzDelta
 ```
 This flexibility allows you to test specific configurations or algorithms without needing to run the entire suite of experiments.
 
-9. Accessing Experiment Results: If you run the experiments yourself, the results will be automatically saved in the _python/results folder.
+9. Accessing Experiment Results:  
+   - If you run the experiments yourself, the results will be automatically saved in the `_python/results` folder.  
+   - To access the results from the thesis, navigate to the `_python/experiments/` directory. Within this directory, you will find subfolders corresponding to different experiments. Each subfolder contains a `results` folder with the results generated for that specific experiment.  
+   - Additionally, merged results files (`merged_results.csv`) are provided in these directories, where the results from multiple experiments are combined into a single CSV file for easier analysis.
+
 
 10. Plotting Results: To reproduce the figures from the thesis or visualize your own results, use the scripts provided in _python/experiments/figs. These scripts are designed to generate the same types of plots used in the thesis, based on the experimental outputs.
 
