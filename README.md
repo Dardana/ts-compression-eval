@@ -48,8 +48,12 @@ make
 ```
 4. Obtain datasets: 
 Download the datasets listed above and generate the synthetic dataset using the provided script. The datasets need to be saved in a following repository structure: 
-
-5. Change the dataset directory in `_python/datasets/paths.py` to match your dataset directory. 
+datasets
+  mrsc
+  
+6. Change the dataset directory in `_python/datasets/paths.py` to match your dataset directory. For example /root/datasets
+7. navigate to the repository ts-compression-benchmark
+8. 
 
 ## Acknowledgments
 
